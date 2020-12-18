@@ -139,7 +139,7 @@ func (m *Manager) save(Tasks []types.Task) bool {
 		fmt.Println("Error saving Tasks config")
 		return false
 	}
-	if ioutil.WriteFile("/etc/autobackup/Tasks.json", data, 0644) != nil {
+	if ioutil.WriteFile(m.TasksLocation, data, 0644) != nil {
 		fmt.Println("Error saving Tasks config")
 		return false
 	}
